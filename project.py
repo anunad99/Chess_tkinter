@@ -180,7 +180,7 @@ class Board(tkinter.Tk):
                             self.make_move('a1', 'd1')
                         elif requested_move == 'e8g8' or requested_move == 'e8h8':
                             self.make_move('e8', 'g8')
-                            self.make_move('h8', 'd8')
+                            self.make_move('h8', 'f8')
                         else:
                             self.make_move('e8', 'c8')
                             self.make_move('a8', 'd8')
