@@ -124,7 +124,7 @@ class Board(tkinter.Tk):
         # aiding the GUI with piece movement, legal moves, result of the game
         self.comparison_board = chess.Board()
 
-    def add_piece_to_square(self, piece, square) -> None:
+    def add_piece_to_square(self, piece: str, square: str) -> None:
         """
         Puts the image of the piece on the square
         :param piece: The piece that has to be put up on
@@ -141,7 +141,7 @@ class Board(tkinter.Tk):
         for square, piece in self.position_on_board.items():
             self.add_piece_to_square(piece, square)
 
-    def button_click(self, square):
+    def button_click(self, square: str) -> None:
         """
         The function to make moves on the board
         :return: None
@@ -258,7 +258,7 @@ class Board(tkinter.Tk):
         else:
             self.result_label.configure(text='Game Drawn')
 
-    def make_move(self, square1, square2):
+    def make_move(self, square1: str, square2: str) -> None:
         """
         Makes move using uci(universal chess interface notation)
         :param square1: The initial square from which the piece moves
@@ -274,7 +274,8 @@ class Board(tkinter.Tk):
         self.position_on_board[square1] = '0'
 
     @staticmethod
-    def print_square(square):
+    def print_square(square: str) -> None:
+        """Prints the algebraic notation of a square"""
         print(square)
 
 
